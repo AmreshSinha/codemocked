@@ -2,10 +2,23 @@
   "name": "codemocked",
   "version": "1.0.0",
   "description": "Self-hostable open-source IDE",
-  "main": "index.js",
+  "workspaces": [
+    "apps/*"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "devDependencies": {
+    "turbo": "latest",
+    "eslint": "^8.19.0",
+    "prettier": "latest"
+  },
+  "engines": {
+    "npm": ">=8.13.2",
+    "node": ">=16.14.2"
+  },
+  "dependencies": {},
+  "packageManager": "npm@8.13.2",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AmreshSinha/codemocked.git"
