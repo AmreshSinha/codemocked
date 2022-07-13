@@ -1,0 +1,19 @@
+{
+  "name": "codemocked",
+  "version": "1.0.0",
+  "description": "Self-hostable open-source IDE",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmreshSinha/codemocked.git"
+  },
+  "author": "AmreshSinha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AmreshSinha/codemocked/issues"
+  },
+  "homepage": "https://github.com/AmreshSinha/codemocked#readme"
+}
