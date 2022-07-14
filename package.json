@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Self-hostable open-source IDE",
   "workspaces": [
-    "apps/*"
+    "apps/api",
+    "apps/ui"
   ],
   "scripts": {
     "build": "turbo run build",
