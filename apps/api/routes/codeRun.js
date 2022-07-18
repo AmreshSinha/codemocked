@@ -6,9 +6,11 @@ var genFile = require('../utils/genFile')
 router.post('/', async function (req, res, next) {
   const { language = 'cpp', code } = req.body
   if (code === undefined) {
-    return res.status(400).json({ success: false, error: "code body is missing or empty!" });
+    return res
+      .status(400)
+      .json({ success: false, error: 'code body is missing or empty!' })
   }
-  const filepath = await genFile(language, code);
+  const filepath = await genFile(language, code)
   return res.json(req.body)
 })
 

@@ -21,9 +21,11 @@ I will surely add the installation step once the project starts stacking up.
 WIP
 
 ## Contributing
+
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Also, make sure to read the CONTRIBUTING and [CODE_OF_CONDUCT](./CODE_OF_CONDUCT.md) guidelines.
 
 ## License
+
 [MIT](/LICENSE)

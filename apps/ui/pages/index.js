@@ -53,7 +53,8 @@ export default function Home() {
   var themeObj = theme === 'light' ? light : dark
   var NavObj = {
     title: process.env.CM_TITLE ? process.env.CM_TITLE : 'Codemocked',
-    showStarBadge: process.env.CM_STARBADGE === false ? process.env.CM_STARBADGE : true,
+    showStarBadge:
+      process.env.CM_STARBADGE === false ? process.env.CM_STARBADGE : true,
   }
 
   return (
@@ -62,7 +63,7 @@ export default function Home() {
         <title>Codemocked</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      
+
       <Navbar navbar={NavObj} theme={themeObj} />
       {/* <h1>Hello World!</h1> */}
       {/* <Button theme={themeObj}>This is a button</Button> */}

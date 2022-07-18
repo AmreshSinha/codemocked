@@ -9,9 +9,18 @@ export default function Navbar(props) {
           <NavbarLink>{props.navbar.title}</NavbarLink>
         </Link>
       </NavbarItem>
-      {props.navbar.showStarBadge ? <NavbarItem>
-        <iframe src="https://ghbtns.com/github-btn.html?user=AmreshSinha&repo=codemocked&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub" />
-      </NavbarItem> : null}
+      {props.navbar.showStarBadge ? (
+        <NavbarItem>
+          <iframe
+            src="https://ghbtns.com/github-btn.html?user=AmreshSinha&repo=codemocked&type=star&count=true"
+            frameborder="0"
+            scrolling="0"
+            width="150"
+            height="20"
+            title="GitHub"
+          />
+        </NavbarItem>
+      ) : null}
     </NavbarContainer>
   )
 }
@@ -35,17 +44,15 @@ const NavbarItem = styled.div`
 `
 
 const NavbarLink = styled.a`
-    text-decoration: none;
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    font-size: 1.2rem;
-    padding-bottom: 5px;
-    background: 
-      linear-gradient(currentColor 0 0) 
-      bottom /var(--d, 20%) 3px 
-      no-repeat;
-    transition:0.5s;
-    :hover {
-        --d: 80%;
-    }
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding-bottom: 5px;
+  background: linear-gradient(currentColor 0 0) bottom / var(--d, 20%) 3px
+    no-repeat;
+  transition: 0.5s;
+  :hover {
+    --d: 80%;
+  }
 `
