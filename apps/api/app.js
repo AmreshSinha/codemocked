@@ -4,7 +4,6 @@ var logger = require('morgan')
 var cors = require('cors')
 
 var indexRouter = require('./routes/index')
-var usersRouter = require('./routes/users')
 var codeRunRouter = require('./routes/codeRun')
 
 var app = express()
@@ -16,7 +15,6 @@ app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser())
 
 app.use('/', indexRouter)
-app.use('/users', usersRouter)
 app.use('/api/code/run', codeRunRouter)
 
 module.exports = app
