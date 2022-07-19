@@ -1,3 +1,6 @@
+# MongoDB
+*.mongodb
+
 # Turbo and other stuff
 .turbo
 .DS_Store
