@@ -17,7 +17,9 @@
 				"mongodb.mongodb-vscode",
 				"esbenp.prettier-vscode",
 				"prisma.prisma",
-				"styled-components.vscode-styled-components"
+				"styled-components.vscode-styled-components",
+				"rangav.vscode-thunder-client",
+				"github.copilot"
 			]
 		}
 	},
