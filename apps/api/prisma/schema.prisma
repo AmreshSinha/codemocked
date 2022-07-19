@@ -11,7 +11,7 @@ model CodeJob {
   id          String   @id @default(auto()) @map("_id") @db.ObjectId
   endedAt     DateTime
   filepath    String
-  input       String
+  input       String?
   language    String
   output      String
   startedAt   DateTime
