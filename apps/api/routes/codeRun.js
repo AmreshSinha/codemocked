@@ -27,9 +27,38 @@ router.post('/', async function (req, res) {
       status: 'pending',
     },
   })
+
   const jobId = job('id')
   addCodeToQueue(jobId)
+
   res.status(201).json({ jobId })
+})
+
+router.get('/status', async function (req, res) {
+  const jobId = req.query.id
+
+  if (jobId === undefined) {
+    return res
+      .status(400)
+      .json({ success: false, error: 'job id is either missing or invalid!' })
+  }
+
+  const job = await prisma.CodeJob.findOne({
+    where: {
+      id: jobId,
+    },
+  })
+
+  if (job === undefined) {
+    return res
+      .status(400)
+      .json({ success: false, error: 'no job found with the provided id' })
+  }
+
+  return res.status(200).json({
+    success: true,
+    job,
+  })
 })
 
 module.exports = router
