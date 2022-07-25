@@ -30,6 +30,10 @@ const runCpp = (filepath, input) => {
           console.log(`${jobId} stdout:\n${data}`)
           resolve(data)
         })
+        child.stderr.on('data', (data) => {
+          console.log(`${jobId} stderr:\n${data}`)
+          reject(data)
+        })
       }
     )
     // (error, stdout, stderr) => {

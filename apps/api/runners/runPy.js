@@ -14,14 +14,18 @@ const runPy = (filepath, input) => {
 
   return new Promise((resolve, reject) => {
     const child = spawn(`python ${filepath}`)
-    child.stderr.on('data', (data) => {
-      reject(data)
-    })
     child.stdin.write(input)
     child.stdin.end()
     child.stdout.on('data', (data) => {
       console.log(`${jobId} stdout:\n${data}`)
       resolve(data)
+    })
+    child.stderr.on('data', (data) => {
+      console.log(`${jobId} stderr:\n${data}`)
+      reject(data)
+    })
+    child.on('close', (code) => {
+      console.log(`${jobId} exited with code ${code}`)
     })
     // exec(`python ${filepath}`, (err, stdout, stderr) => {
     //   if (err) {
