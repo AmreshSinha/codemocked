@@ -40,7 +40,11 @@ router.get('/status', async function (req, res) {
   if (jobId === undefined) {
     return res
       .status(400)
-      .json({ success: false, error: 'job id is either missing or invalid!' })
+      .json({
+        success: false,
+        status: 400,
+        message: 'job id is either missing or invalid!',
+      })
   }
 
   const job = await prisma.CodeJob.findOne({
@@ -52,7 +56,11 @@ router.get('/status', async function (req, res) {
   if (job === undefined) {
     return res
       .status(400)
-      .json({ success: false, error: 'no job found with the provided id' })
+      .json({
+        success: false,
+        status: 400,
+        message: 'no job found with the provided id',
+      })
   }
 
   return res.status(200).json({
